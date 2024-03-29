@@ -1,0 +1,37 @@
+<main>
+<form [formGroup]="form">
+    <h2>Enter with your account </h2>
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="enter your email" formControlName="email">
+        <mat-error *ngIf="form.get('email')!.hasError('required') ">
+            Email is required
+          </mat-error>
+        <mat-error *ngIf="form.get('email')!.hasError('email') ">
+            Email is invalid
+        </mat-error>
+    </mat-form-field>
+   
+    <mat-form-field >
+        <mat-label>Password</mat-label>
+        <input type="password" matInput  placeholder="password" formControlName="password">
+        <mat-error *ngIf="form.get('password')!.hasError('required') ">
+            password is required
+        </mat-error>
+        
+    </mat-form-field>
+    <div class='aligned-to-right'>
+        <button  color="primary" [disabled]="!form.get('email')!.valid"
+            test-id="recover-password-button">
+            Recover Password
+        </button>
+        
+    </div>
+      <button mat-raised-button color="primary" [disabled]="!form.valid"
+            test-id="login-button">
+            Login
+        </button>
+      <button mat-stroked-button color="primary">Register</button>
+  </form>
+</main>
+  
