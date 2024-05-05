@@ -1,0 +1,43 @@
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+  
+    // Style pour chaque section du paragraphe
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  
+    // Style pour le titre de chaque section
+    strong {
+      display: block;
+      font-weight: bold;
+      font-size: 20px;
+      color: #000;
+      margin-bottom: 10px;
+    }
+  
+    // Style pour chaque élément de liste
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+  
+    // Style pour chaque élément de liste
+    li {
+      margin-bottom: 10px;
+    }
+  
+    // Style pour les liens dans le paragraphe
+    a {
+      color: #007bff;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  

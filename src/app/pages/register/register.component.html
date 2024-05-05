@@ -1,0 +1,97 @@
+<body>
+    
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true">
+            <div class="container">
+                <div class="register-content">
+                    <div *ngIf="!isSignedIn" class="signup">
+                        <form class="inputs" [formGroup]="registerForm" (ngSubmit)="registerWithEmailAndPassword()">
+                            <div class="head">
+                                <label for="checked " aria-hidden="true">Sign up</label>
+                            </div>
+                            <input type="text" formControlName="username" placeholder="Username" required>
+                            <input type="text" formControlName="Name" placeholder="Name" required>
+                            <input type="text" formControlName="phoneNumber" placeholder="Phone Number" required>
+                            <input type="email" formControlName="email" placeholder="Email" required>
+                            <div class="kkol"
+                                *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.hasError('required')"
+                                class="error">Email is required</div>
+                                <form [formGroup]="registerForm" class="register-form">
+                                    <div class="form-group">
+                                        <label for="role">Role:</label>
+                                        <select id="role" formControlName="role" (change)="onRoleChange($event)">
+                                          <option value="">Select a role</option>
+                                          <option value="enseignant">Enseignant</option>
+                                          <option value="etudiant">Étudiant</option>
+                                        </select>
+                                      </div>
+                                    
+                                      <div class="form-group" *ngIf="isEnseignant">
+                                          <label for="matieres">Matieres:</label>
+                                          <select id="matieres" formControlName="matieres">
+                                            <option value="">Select a matiere</option>
+                                            <option value="matiere1">Python</option>
+                                            <option value="matiere2">Data sciences</option>
+                                            <option value="matiere3">Java</option>
+                                          </select>
+                                        </div>
+                                        
+                                        <div class="form-group" *ngIf="isEnseignant">
+                                          <label for="classes">Classes:</label>
+                                          <select id="classes" formControlName="classes">
+                                            <option value="">Select a class</option>
+                                            <option value="class1">Lsi1</option>
+                                            <option value="class2">Lsi2</option>
+                                            <option value="class3">Lsi3</option>
+                                          </select>
+                                        </div>
+                                        
+                                        <div class="form-group" *ngIf="isEtudiant">
+                                          <label for="classe">Classe:</label>
+                                          <select id="classe" formControlName="classe">
+                                            <option value="">Select a class</option>
+                                            <option value="class1">Lsi1</option>
+                                            <option value="class2">Lsi2</option>
+                                            <option value="class3">Lsi3</option>
+                                          </select>
+                                        </div>
+                                </form>
+                              
+        
+                            <input type="password" formControlName="password" placeholder="Password" required>
+                            <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" required>
+                            <div class="kkol"
+                                *ngIf="registerForm.get('password')?.value !== registerForm.get('confirmPassword')?.value && registerForm.get('confirmPassword')?.touched"
+                                class="error">Passwords do not match</div>
+                            <button type="submit" (click)="registerWithEmailAndPassword()"
+                                [disabled]="registerForm.invalid || registerForm.pristine" routerLink="'/signin'">Sign
+                                up</button>
+                              
+        
+        
+        
+                        </form>
+                    </div>
+                </div>
+               
+                
+                <div class="login">
+                    <form>
+                        <a routerLink="/signin" class="underlineHover" style="text-decoration: none;"> <label for="chk"
+                                aria-hidden="true">SignIn</label></a>
+                    </form>
+                </div>
+            
+                
+                
+            </div>
+
+            <div class="login-image">
+                <img src="assets/image.jpg" alt="Login Image">
+            </div>
+    
+
+
+    </div>
+    
+</body>

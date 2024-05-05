@@ -1,37 +1,48 @@
-<main>
-<form [formGroup]="form">
-    <h2>Enter with your account </h2>
-    <mat-form-field>
-        <mat-label>Email</mat-label>
-        <input type="email" matInput placeholder="enter your email" formControlName="email">
-        <mat-error *ngIf="form.get('email')!.hasError('required') ">
-            Email is required
-          </mat-error>
-        <mat-error *ngIf="form.get('email')!.hasError('email') ">
+<div class="login-container">
+  <div class="login-box">
+    <div class="login-form">
+      <h2>SingIn</h2>
+      <form [formGroup]="form">
+        <div>
+          <input type="text" formControlName="email" placeholder="Username" required>
+          <div *ngIf="form.get('email')!.hasError('pattern')" class="comment">
+            Please enter the '@' character
+          </div>
+          <div *ngIf="form.get('email')!.hasError('email')" class="error-message">
             Email is invalid
-        </mat-error>
-    </mat-form-field>
-   
-    <mat-form-field >
-        <mat-label>Password</mat-label>
-        <input type="password" matInput  placeholder="password" formControlName="password">
-        <mat-error *ngIf="form.get('password')!.hasError('required') ">
-            password is required
-        </mat-error>
-        
-    </mat-form-field>
-    <div class='aligned-to-right'>
-        <button  color="primary" [disabled]="!form.get('email')!.valid"
-            test-id="recover-password-button">
-            Recover Password
+          </div>
+          <div *ngIf="emailNotFound" class="error-message">
+            Email not found in database
+          </div>
+        </div>
+        <div>
+          <input type="password" placeholder="Password" formControlName="password" required>
+          <div *ngIf="form.get('password')!.hasError('required')" class="error-message">
+
+          </div>
+        </div>
+        <div class="aligned-to-right">
+          <button mat-button color="primary" [disabled]="!form.valid || isLoggingIn" (click)="login()">SignIn</button>
+          <br><br>
+          <button [disabled]="!form.get('email')!.valid || isRecoveringPassword" (click)="recoverPassword()"
+            *ngIf="!isRecoveringPassword" test-id="recover-password-button">Recover Password</button>
+        </div>
+        <button type="button" (click)="signinWithGoogle()" class="btn btnFill">
+          <img src="assets/google.jpeg" alt="Google Image">
         </button>
-        
+        <button mat-raised-button color="primary" class="button-loader" *ngIf="isLoggingIn" test-id="login-loader"
+          type="button" aria-label="Logging in">
+          <mat-spinner color="accent" diameter="20"></mat-spinner>
+        </button>
+        <div class="row">
+          <div id="formFooter">
+            <a routerLink="/register" class="underlineHover">Need Account?</a>
+          </div>
+        </div>
+      </form>
     </div>
-      <button mat-raised-button color="primary" [disabled]="!form.valid"
-            test-id="login-button">
-            Login
-        </button>
-      <button mat-stroked-button color="primary">Register</button>
-  </form>
-</main>
-  
+    <div class="login-image">
+      <img src="assets/image.jpg" alt="Login Image">
+    </div>
+  </div>
+</div>

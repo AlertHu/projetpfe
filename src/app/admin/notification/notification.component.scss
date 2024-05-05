@@ -1,0 +1,32 @@
+body {
+    margin: 20px; /* Marge autour du formulaire */
+    padding: 20px; /* Espacement interne du formulaire */
+    border: 1px solid #ccc; /* Bordure du formulaire */
+    border-radius: 5px; /* Bordure arrondie */
+    background-color: #f9f9f9; /* Couleur de fond du formulaire */
+  
+    div {
+      margin-bottom: 15px; /* Espacement entre les éléments du formulaire */
+      
+      label {
+        display: block; /* Affichage en bloc pour les labels */
+        margin-bottom: 5px; /* Espacement sous les labels */
+        font-weight: bold; /* Texte en gras pour les labels */
+      }
+  
+      input[type="text"],
+      textarea {
+        width: 100%; /* Largeur maximale pour les champs de texte */
+        padding: 10px; /* Espacement interne pour les champs de texte */
+        border: 1px solid #ccc; /* Bordure des champs de texte */
+        border-radius: 3px; /* Bordure arrondie pour les champs de texte */
+      }
+  
+      textarea {
+        min-height: 100px; /* Hauteur minimale pour les zones de texte */
+      }
+    }
+  
+    
+  }
+  

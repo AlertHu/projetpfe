@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="user-profile" *ngIf="userData">
+      <div class="user-info">
+          <p><span>Username:</span> {{ userData.username }}</p>
+          <p><span>name:</span> {{ userData.name }}</p>
+          <p><span>Email:</span> {{ userData.email }}</p>
+          <p><span>Phone Number:</span> {{ userData.phoneNumber }}</p>
+          <p><span>Role:</span> {{ userData.role }}</p>
+          <div *ngIf="userData.role === 'enseignant'">
+            <p><span>Matières:</span> {{ userData.matieres }}</p>
+            <p><span>Classe:</span> {{ userData.classes }}</p>
+          </div>
+          <div *ngIf="userData.role === 'etudiant'">
+            <p><span>classe:</span> {{ userData.classe }}</p>
+          </div>
+         
+          <!-- Add other user fields as needed -->
+      </div>
+  </div>
+</div>

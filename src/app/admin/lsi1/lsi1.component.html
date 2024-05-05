@@ -1,0 +1,41 @@
+<div id="sidebar">
+    <h2>AlertHub Management</h2>
+    <div id="profile-icon">
+      <img width="150" src="assets/admin.png" />
+    </div>
+    <ul>
+      <li><a href="admin/dashboardadm"><mat-icon>dashboard</mat-icon>
+          Dashboard</a></li>
+      <li><a href="admin/student"><mat-icon>groups</mat-icon> Students</a></li>
+      <li><a href="admin/teacher"><mat-icon>account_circle</mat-icon> Teachers</a></li>
+      <li><a href="admin/courses"><mat-icon>folder</mat-icon> Courses</a></li>
+      <li><a href="admin/attendance"><mat-icon>person_add</mat-icon> Attendance</a></li>
+      <li><a href="admin/reports"><mat-icon>reports</mat-icon> Reports</a></li>
+  
+    </ul>
+    <a href="/signin" class="sidebar-button"><mat-icon>logout</mat-icon> Logout</a>
+  </div>
+  <div id="content">
+    <h1>Students' Lists</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>classes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of UserData |async">
+          <td>{{ data.name}} </td>
+          <td>{{data.username}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.classe}}</td>
+        </tr>
+  
+      </tbody>
+    </table>
+    
+  
+  </div>

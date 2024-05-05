@@ -1,37 +1,272 @@
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-}
+
+
 form{
+      .btn img {
+        width: 75px;
+        height: auto;
+        margin-right: 15px;
+      }
+
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    color: rgb(26, 22, 87);
     
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin:  20px;
+
     button,
     mat-form-field{
+      
         width: -webkit-fill-available;
 
     }
-    mat-form-field{
-        margin-bottom: 10px;
+    mat-form-field {
+      transform: scale(1.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 90%;
+      transform: scale(1.1);
+      width: 60%;
+      height: 20px;
+      background: none;
+      justify-content: center;
+      display: flex;
+      padding: 17px;
+      // border: none;
+      // outline: none;
+      border-bottom: solid 1px #2760bd;
+      transition: .3s;
+  
+      input.mat-input-element:focus {
+          /* Ajoutez les styles pour la saisie lorsque le champ est sélectionné */
+        
+          border-bottom: solid 1px rgb(11, 11, 24); /* Exemple de style de bordure lorsqu'il est sélectionné */
+      }
+  }
+     
+     
+
+       
+
     }
     button{
-        margin: 5px 0;
+      
+      
+
         &[mat-button]{
             width:auto;
+  
+            height: 40px;
+            margin: 10px auto;
+            justify-content: center;
+            display: block;
+            color: #fff;
+            background: #325283;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 20px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            transition: .2s ease-in;
+            cursor: pointer;
+
+
         }
+
     }
+    
+
     .aligned-to-right{
         text-align: right;
         width: 100%;
     }
+   
+
+
+    input {
+      width: 60%;
+      height: 40px;
+      background: none;
+      justify-content: center;
+      display: flex;
+      padding: 22px;
+      border: none;
+      outline: none;
+      /* border-radius: 5px; */
+      border-bottom: solid 1px #5489ec;
+      transition: .3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 90%;
+      
+    }
+    input:focus {
+      transform: scale(1.1);
+    }  input:focus {
+      transform: scale(1.1);
+    }
     
 
+
+
+
+
+ #chk:checked {
+        transform: scale(.6);
 }
-h1{
-    color: rgb(15, 4, 4);
+#chk{
+    display: none;
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+.signup{
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+#formFooter {
+
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+  }
+  .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #115171;
+    content: "";
+    transition: width 0.2s;
+  }
+
+  .underlineHover:hover {
+    color: #0d0d0d;
+  }
+
+  .underlineHover:hover:after{
+    width: 100%;
+  }
+ 
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+
+  border-radius: 10px; // Coins arrondis
+  padding: 20px;
+  box-shadow:  5px 20px 50px #000;
+}
+.login-form {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.login-image {
+  flex: 1;
+  padding-left: 20px;
+ 
+}
+
+//
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+  background: linear-gradient(to bottom, #365d7c, #46639a, #adadc1);
+}
+.login-box {
+  padding: 0px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 5px 20px 50px #000;
+  box-shadow:  5px 20px 50px #000;
+  text-align: center;
+
+   border-radius: 10px;
+  transition: .8s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.login-form {
+  
+  padding-right: 20px;
+  font-family: 'Jost', sans-serif;
+  font-weight: bold;
+  color: #3c47a7;
+  cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.login-image {
+  flex: 1;
+  padding-left: 20px;
+}
+
+ h2 {
+   margin-bottom: 20px;
+   font-family: 'Jost', sans-serif;
+   font-weight: bold;
+   color: #3c47a7;
+   font-size: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.aligned-to-right {
+  text-align: right;
+  
+}
+
+#error-message {
+  color: rgb(16, 6, 6);
+}
+
+#comment {
+  color: rgb(24, 9, 9);
 }

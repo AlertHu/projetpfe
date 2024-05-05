@@ -1,0 +1,114 @@
+<div class="profile-page">
+  <!-- Bouton pour afficher/masquer le menu horizontal -->
+  <button class="toggle-btn" (click)="toggleHorizontalMenu()">Menu</button>
+
+  <!-- Sidebar horizontal -->
+  <div class="sidebar-horizontal" [ngClass]="{'show-menu': showHorizontalMenu}">
+    <ul class="horizontal-menu">
+      <li><a href="ProfilUtilisateur">Profil</a></li>
+      <li><a href="emploi">Emploi</a></li>
+      <li><a href="cours">cours</a></li>
+      <li><a href="">Notifie</a></li>
+    </ul>
+  </div>
+
+  <!-- Contenu principal avec sidenav vertical -->
+  <div class="main-content">
+    <!-- Barre de titre -->
+    <div class="title-bar">
+      <h1>HomePage</h1>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="content">
+
+      <div class="profile-content">
+        <div class="ag-format-container">
+          <div class="ag-courses_box">
+            <div class="ag-courses_item">
+              <a href="cours" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+
+                <div class="ag-courses-item_title">cours</div>
+
+              </a>
+            </div>
+
+            <div class="ag-courses_item">
+              <a href="emploi" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+
+                <div class="ag-courses-item_title">
+                  Emploi
+                </div>
+
+              
+              </a>
+            </div>
+
+            <div class="ag-courses_item">
+              <a href="#" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+
+                <div class="ag-courses-item_title">
+                  Affichage
+                </div>
+
+              </a>
+            </div>
+
+            <div class="ag-courses_item">
+              <a href="reclamation" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+
+                <div class="ag-courses-item_title">
+                  Reclamation
+                </div>
+
+                <div class="ag-courses-item_date-box">
+
+
+                </div>
+              </a>
+            </div>
+
+            <div class="ag-courses_item">
+              <a href="#" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+
+                <div class="ag-courses-item_title">
+                  liste de Note
+                </div>
+
+               
+              </a>
+            </div>
+
+            <div class="ag-courses_item">
+              <a href="#" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+
+                <div class="ag-courses-item_title">
+                  liste d'absence
+                </div>
+              </a>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

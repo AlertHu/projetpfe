@@ -1,0 +1,51 @@
+.success-message {
+    /* Styles pour le bloc contenant le message de succès */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* Styles pour le formulaire de case à cocher */
+    form {
+        margin-top: 20px;
+
+        /* Styles pour le conteneur de la case à cocher */
+        label {
+            display: block;
+            position: relative;
+            padding-left: 30px; /* Ajustez selon vos besoins */
+
+            /* Styles pour la case à cocher elle-même */
+            input[type="checkbox"] {
+                position: absolute;
+                left: 0;
+                top: 0;
+                appearance: none;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                background-color: #fff;
+                cursor: pointer;
+
+                /* Style de la coche de la case à cocher */
+                &:checked {
+                    background-color: #007bff;
+                    border-color: #007bff;
+
+                    /* Styles de la coche */
+                    &::after {
+                        content: "\2713";
+                        font-size: 14px;
+                        color: #fff;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}

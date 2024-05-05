@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+
+  }
+  
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divise le conteneur en deux colonnes de largeur égale */
+    width: 60%; /* Utilisation de la largeur maximale */
+    height: 500px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 20px 50px #000;
+    transition: .8s ease-in-out;
+    
+    
+  }
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #chk {
+    display: none;
+  }
+  
+  .signup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    font-size: 14px;
+  }
+  
+  .kkol {
+    margin: 15px 0;
+  }
+  
+  label {
+    color: #3c47a7;
+    font-size: 20px;
+    padding-left: 20px;
+    justify-content: center;
+    display: flex;
+     margin: 10px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    
+  }
+  
+  input {
+    width: 60%;
+    height: 20px;
+    background: none;
+    justify-content: center;
+    display: flex;
+    padding: 17px;
+    border: none;
+    outline: none;
+    /* border-radius: 5px; */
+    border-bottom: solid 1px #5489ec;
+    transition: .3s;
+  }
+  
+  input:focus {
+    transform: scale(1.1);
+  }
+  
+  /* profile  */
+  .head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .prefile {
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  // .icon-container {
+  //   width: 80px;
+  //   height: 80px;
+  //   border-radius: 50%;
+  //   border: 2px solid #fff;
+  //   overflow: hidden;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   background-color: #adadc1;
+  // }
+  
+  .icon {
+    width: 100%;
+    height: auto;
+  }
+  
+  .round-image-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  /////////
+    bottom: 10px;
+    left: 50%;
+  }
+  
+  
+  #delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    transform: translateX(-50%);
+  }
+  
+  i:not(.çop-icon) {
+    color: aliceblue;
+  }
+  
+  .çop-icon {
+    width: 20px;
+    height: 20px;
+    color: #ff0000;
+  }
+  
+  /*  */
+  button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #325283;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #6078c0;
+  }
+  
+  .image {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    align-items: center;
+  }
+  
+
+  
+  
+  
+  .login {
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+    //border-radius: 60% / 10%; form button
+   
+    
+    position: relative;
+   
+  }
+  .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #115171;
+    content: "";
+    transition: width 0.2s;
+  }
+  
+  .underlineHover:hover {
+    color: #0d0d0d;
+  }
+  
+  .underlineHover:hover:after{
+    width: 100%;
+  } 
+  .fadeIn.fourth {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  .login label {
+    color: #388aa7;
+    transform: scale(.6);
+  }
+  
+  #chk:checked~.login {
+    transform: translateY(-500px);
+  }
+  
+  #chk:checked~.login label {
+    transform: scale(1);
+  }
+  
+  #chk:checked~.signup label {
+    transform: scale(.6);
+  }
+  /* register-success-message.component.scss */
+
+.success-message {
+  background-color: #4caf50; /* Couleur de fond verte */
+  color: #fff; /* Couleur du texte en blanc */
+  padding: 10px 20px; /* Espacement intérieur */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  margin-top: 20px; /* Marge supérieure */
+  display: flex; /* Afficher en tant que bloc en ligne */
+  align-items: center; /* Centrer verticalement le contenu */
+}
+
+.success-message p {
+  margin: 0; /* Annuler les marges par défaut */
+  font-size: 16px; /* Taille de la police */
+  margin-right: 10px; /* Marge à droite pour l'espacement */
+}
+
+.success-message button {
+  background-color: transparent; /* Bouton sans fond */
+  color: #fff; /* Couleur du texte en blanc */
+  border: none; /* Supprimer les bordures */
+  cursor: pointer; /* Curseur pointer */
+}
+
+.login-form {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.login-image {
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+.login-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 0 0 10px;
+}
+.form-group {
+  display: inline-block; // Afficher les éléments dans la même ligne
+  margin-right: 20px; // Ajouter un espacement entre les éléments
+}
+
+label {
+  display: block; // Assurer que les étiquettes sont affichées sur une ligne séparée
+  margin-bottom: 5px; // Ajouter un espace sous les étiquettes
+}

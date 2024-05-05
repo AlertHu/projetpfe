@@ -1,11 +1,11 @@
 export const defaultenvironment = {
    firebase: {
-        apiKey: "AIzaSyAopTKemV14J9fvve86PHQBhGM6fz7rIsE",
-        authDomain: "testing-9fcc2.firebaseapp.com",
-        projectId: "testing-9fcc2",
-        storageBucket: "testing-9fcc2.appspot.com",
-        messagingSenderId: "345374265514",
-        appId: "1:345374265514:web:bbfb4c04b7e3094faf00d3"
+    apiKey: "AIzaSyCeiJ-R2h7Xb0Sq_3V09a3WZmCiz-hB5Os",
+    authDomain: "jareeb-ea48c.firebaseapp.com",
+    projectId: "jareeb-ea48c",
+    storageBucket: "jareeb-ea48c.appspot.com",
+    messagingSenderId: "240495022067",
+    appId: "1:240495022067:web:782e8ad23fc51d1edecc86"
       },
       production: false
 };

@@ -1,0 +1,82 @@
+.banner {
+    //background-image: url(../../../assets/); /* Chemin vers votre image */
+    background-position: center top; /* Position de l'image sur l'arrière-plan */
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la zone de l'arrière-plan */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //min-height: 80vh;
+    font-family: 'Jost', sans-serif;
+    //background: linear-gradient(120deg, #2980b9, #8e44ad); /* Fallback background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+    position: relative; /* Assurez-vous que la div a une position relative */
+    width: 100%; /* Largeur de la div */
+    height: 590px; /* Hauteur de la div (ajustez selon vos besoins) */
+    overflow: hidden; /* Empêche l'image de déborder de la div */
+    .full-width-height {
+        position: absolute; /* Position absolue pour remplir toute la div */
+        width: 100%; /* Largeur de l'image */
+        height: 100%; /* Hauteur de l'image */
+        object-fit: cover; /* Redimensionne l'image pour remplir toute la div en conservant son rapport d'aspect */
+        top: 0; /* Alignement au haut de la div */
+        left: 0; /* Alignement à gauche de la div */
+    }  
+}
+
+.centered-content {
+    position: absolute; /* Définir la position absolue */
+    right:20px; /* Définir la distance du bord droit */
+    bottom: 0px; /* Définir la distance du bas (ajustez selon vos besoins) */
+
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    
+    
+}
+
+.centered-content h1 {
+    color: rgb(12, 7, 7);
+}
+
+.centered-content button {
+    background-color: #4c6aaf;
+    color: white;
+    // padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    position: absolute; /* Définir la position absolue */
+    //  right:10px; /* Définir la distance du bord droit */
+    // bottom: 40px; /* Définir la distance du bas (ajustez selon vos besoins) */
+}
+
+.banner h1
+{
+    
+    color:rgb(252, 253, 255);
+    font-size: 50px;
+    font-weight: bold;
+    //left: 30%;
+    //top:20%
+    position: absolute;
+   
+}
+
+.content h1
+{
+    position: absolute; /* Définir la position absolue */
+    right:1px; /* Définir la distance du bord droit */
+    bottom: 0px; /* Définir la distance du bas (ajustez selon vos besoins) */
+
+   text-decoration: none;
+   background-color: #383698;
+   color:var(--primary-color);
+   padding: 20px 20px ;
+}

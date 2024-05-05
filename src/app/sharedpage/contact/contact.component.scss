@@ -1,0 +1,57 @@
+// Variables
+$primary-color: #4057aa;
+$secondary-color: #6c757d;
+
+// Styles
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.container {
+  max-width: 800px;
+ 
+  text-align: center;
+}
+.title {
+  color: $primary-color;
+  font-size: 2.5rem;
+  margin-bottom: 100px;
+}
+
+.message {
+  color: $secondary-color;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin-bottom: 20px;
+  margin: 0 10px; // Ajustez la marge autour des cartes
+  display: inline-block;
+  width: calc(33.33% - 20px);
+  vertical-align: top;
+}
+  i {
+    font-size: 2rem;
+    color: $primary-color;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: 1rem;
+    margin: 0;
+  }
+

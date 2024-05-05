@@ -1,0 +1,39 @@
+div{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #365d7c, #46639a, #adadc1);
+}
+#chk{
+    display: none;
+}
+button{
+    width: 60%;
+    height: 40px;
+    margin: 40px auto;
+    justify-content: center;
+    color: #fff;
+    background: #325283;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+button:hover{
+    background: #6078c0;
+}
+
+ 
+h1 {
+    font-size: 2em; /* Changer la taille de la police */
+    font-weight: bold; /* Mettre en gras */
+    color: #333; /* Changer la couleur du texte */
+  }   

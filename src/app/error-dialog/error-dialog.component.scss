@@ -1,0 +1,29 @@
+.error-dialog {
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      color: red; // Couleur du titre
+      margin-bottom: 10px; // Marge en bas du titre
+    }
+  
+    p {
+      font-size: 16px;
+      color: #333; // Couleur du texte du message d'erreur
+      margin-bottom: 20px; // Marge en bas du message
+    }
+  
+    button {
+      background-color: #ccc; // Couleur de fond du bouton
+      color: #fff; // Couleur du texte du bouton
+      border: none; // Supprimez la bordure du bouton
+      padding: 10px 20px; // Ajoutez un peu de rembourrage au bouton
+      border-radius: 5px; // Ajoutez une bordure arrondie
+      cursor: pointer; // Curseur de souris sur le bouton
+      transition: background-color 0.3s ease; // Transition pour un effet de survol doux
+  
+      &:hover {
+        background-color: #999; // Changement de couleur de fond lors du survol
+      }
+    }
+  }
+  

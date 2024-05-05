@@ -1,0 +1,17 @@
+<form [formGroup]="reclamationForm" (ngSubmit)="onSubmit()">
+    <div>
+      <p><span>Username:</span> {{userData}}</p>
+      <label for="subject">Sujet : </label>
+      <input type="text" formControlName="subject" id="subject" >
+    </div>
+    <div>
+      <label for="description">Description :</label>
+      <textarea formControlName="description" id="description"></textarea>
+    </div>
+    <div>
+      <label for="attachment">attachment:</label>
+      <input type="file" formControlName="attachment" id="attachment">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  
